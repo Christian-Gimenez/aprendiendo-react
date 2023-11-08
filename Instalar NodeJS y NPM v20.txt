@@ -1,0 +1,8 @@
+# Seguimos la docu del enlace siguiente para instalarlo: https://github.com/nodesource/distributions
+# Ya que por defecto los repo de Ubuntu instalan la v12 de nodejs
+# Por lo que debemos actualizar el repositorio, darle permisos, indicar la version a instalar y ya instalarlo
+
+curl -SLO https://deb.nodesource.com/nsolid_setup_deb.sh
+chmod 500 nsolid_setup_deb.sh
+./nsolid_setup_deb.sh 20
+apt-get install nodejs -y

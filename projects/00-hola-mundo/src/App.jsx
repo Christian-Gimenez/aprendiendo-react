@@ -1,35 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css"
+import { TwitterFollowCard } from "./TwitterFollowCard"
+//VOY POR 1:18:40 = https://youtu.be/7iobxzd_2wY?si=ALtGFr24F3GeXkPO&t=4720
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export function App() {//Creamos el componente y lo exportamos
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    //<> Como poner <React.Fragment> pero abreviado
+    <section className="App"> 
+      <TwitterFollowCard isFollowing userName="goku" name="Son Goku" />
+      <TwitterFollowCard isFollowing={false} userName="Christian-Gimenez" name="Christian Giménez" />
+      <TwitterFollowCard isFollowing userName="songohanda" name="Son Gohan" />
+      <TwitterFollowCard isFollowing userName="midudev" name="Miguel Ángel Duran" />
+    </section>
+
   )
 }
-
-export default App
